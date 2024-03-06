@@ -7,7 +7,7 @@ def predict_selling_price(Year, Present_Price, Kms_Driven, Seller_Type, Transmis
 
     print('input received in frunction predict_selling_price ',Year, Present_Price, Kms_Driven, Seller_Type, Transmission, Fuel_Type)
     drug_pickle_path = config.MODEL_FILE_PATH
-    drug_json_path = r"artifacts\column_data.json"
+    drug_json_path = config.COLUMN_DATA_JSON
 
     with open(drug_pickle_path, 'rb') as f:
         model = pickle.load(f)
